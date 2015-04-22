@@ -15,9 +15,9 @@ SimpleCalculator for Android (Homework)
 - Enjoy
 
 ## Link
-Download: [1]
+Download: [Mega]
 
 
 
-[1]: https://mega.co.nz/#!bAoiUL5b!ny7snuJ7Ih_sopzkBhnhDuFWkdWxzWndaNbvGtA_UbA
+[Mega]: https://mega.co.nz/#!bAoiUL5b!ny7snuJ7Ih_sopzkBhnhDuFWkdWxzWndaNbvGtA_UbA
 
