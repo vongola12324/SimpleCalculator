@@ -2,6 +2,8 @@ package tw.vongola.simplecalculator;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +19,8 @@ import java.util.Stack;
 public class Calculaor extends Activity implements View.OnClickListener{
 
     protected BigDecimal Memory = new BigDecimal("0");
+    protected boolean musicPlayed = false;
+    MediaPlayer player_S;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -381,7 +385,42 @@ public class Calculaor extends Activity implements View.OnClickListener{
             dialog.setView(iv);
             dialog.setMessage("GNU GPLv3\n");
             dialog.show();
-
+        } else if(str.equals("0x9999=")) {
+            AlertDialog.Builder dialog = new AlertDialog.Builder(Calculaor.this);
+            dialog.setTitle("Exit");
+            dialog.setMessage("Error: You found an egg.");
+            dialog.setPositiveButton("What The F......", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    System.exit(0);
+                }
+            });
+            dialog.show();
+        } else if(str.equals("0x0930=")) {
+            try{
+                MediaPlayer player = MediaPlayer.create(Calculaor.this, R.drawable.music);
+                if(musicPlayed){
+                    player_S.stop();
+                    musicPlayed = false;
+                } else {
+                    player.setLooping(true);
+                    player.setVolume(100, 100);
+                    player.start();
+                    musicPlayed = true;
+                    player_S = player;
+                }
+            }catch (Exception e){
+                AlertDialog.Builder dialog = new AlertDialog.Builder(Calculaor.this);
+                dialog.setTitle("Music");
+                dialog.setMessage("No Music... :(");
+                dialog.show();
+            }
+        } else if(str.equals("0x1314=")) {
+            AlertDialog.Builder dialog = new AlertDialog.Builder(Calculaor.this);
+            dialog.setTitle("Love");
+            dialog.setMessage("520");
+            dialog.setPositiveButton("I Love You.", null);
+            dialog.show();
         }
     }
 
