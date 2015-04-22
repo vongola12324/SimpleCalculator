@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+
+    <!-- 填充的顏色 -->
+    <solid android:color="#e6e6f2"/>
+
+    <!-- 環狀外部寬度的顏色 -->
+
+    <!-- 設置按鈕的四個角為弧形 -->
+
+    <corners android:radius="40dp" />
+
+    <!-- padding：Button裡面的文字與Button邊界的間隔 -->
+
+</shape>
