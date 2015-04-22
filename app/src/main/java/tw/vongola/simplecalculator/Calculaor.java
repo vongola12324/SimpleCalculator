@@ -5,7 +5,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -27,7 +26,6 @@ public class Calculaor extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculaor);
         onButtonInit();
-
     }
 
     protected void onButtonInit(){
@@ -198,7 +196,7 @@ public class Calculaor extends Activity implements View.OnClickListener{
         String rt = "";
         if(str.charAt(0) == '0' && str.charAt(1) == 'x'){
             isEgg(str);
-            rt = "";
+            rt = "0";
         }
         else {
             BigDecimal ans = new BigDecimal(0);
@@ -378,12 +376,9 @@ public class Calculaor extends Activity implements View.OnClickListener{
             dialog.setMessage("Author: Vongola\nAdvanced Object Oriented Design\nIECS, FCU");
             dialog.show();
         } else if(str.equals("0x0985=")) {
-            ImageView iv = new ImageView(Calculaor.this);
-            iv.setImageResource(R.drawable.gplv3);
             AlertDialog.Builder dialog = new AlertDialog.Builder(Calculaor.this);
             dialog.setTitle("License");
-            dialog.setView(iv);
-            dialog.setMessage("GNU GPLv3\n");
+            dialog.setMessage("Creative Commons\nAttribution-NonCommercial-ShareAlike 4.0 International\n\nNot Including:\n\t- All the Music\n\t- All the Pictures");
             dialog.show();
         } else if(str.equals("0x9999=")) {
             AlertDialog.Builder dialog = new AlertDialog.Builder(Calculaor.this);
@@ -398,7 +393,7 @@ public class Calculaor extends Activity implements View.OnClickListener{
             dialog.show();
         } else if(str.equals("0x0930=")) {
             try{
-                MediaPlayer player = MediaPlayer.create(Calculaor.this, R.drawable.music);
+                MediaPlayer player = MediaPlayer.create(Calculaor.this, R.drawable.fd);
                 if(musicPlayed){
                     player_S.stop();
                     musicPlayed = false;
@@ -421,6 +416,17 @@ public class Calculaor extends Activity implements View.OnClickListener{
             dialog.setMessage("520");
             dialog.setPositiveButton("I Love You.", null);
             dialog.show();
+        } else if(str.equals("0x0000=")){
+            ImageView iv = new ImageView(Calculaor.this);
+            iv.setImageResource(R.drawable.egg);;
+            AlertDialog.Builder dialog = new AlertDialog.Builder(Calculaor.this);
+            dialog.setTitle("You Found An Egg!!");
+            dialog.setView(iv);
+            dialog.setPositiveButton("Close", null);
+            dialog.show();
+        } else {
+            TextView tv = (TextView)findViewById(R.id.tf);
+            tv.setText("0");
         }
     }
 
