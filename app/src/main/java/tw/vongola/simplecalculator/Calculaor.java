@@ -417,7 +417,45 @@ public class Calculaor extends Activity implements View.OnClickListener{
                 dialog.setMessage("No Music... :(");
                 dialog.show();
             }
-        } else if(str.equals("0x1314=")) {
+        } else if(str.equals("0x0931=")) {
+            try{
+                MediaPlayer player = MediaPlayer.create(Calculaor.this, R.drawable.bug);
+                if(musicPlayed){
+                    player_S.stop();
+                    musicPlayed = false;
+                } else {
+                    player.setLooping(true);
+                    player.setVolume(100, 100);
+                    player.start();
+                    musicPlayed = true;
+                    player_S = player;
+                }
+            }catch (Exception e){
+                AlertDialog.Builder dialog = new AlertDialog.Builder(Calculaor.this);
+                dialog.setTitle("Music");
+                dialog.setMessage("No Music... :(");
+                dialog.show();
+            }
+        } else if(str.equals("0x0932=")) {
+            try{
+                MediaPlayer player = MediaPlayer.create(Calculaor.this, R.drawable.rh);
+                if(musicPlayed){
+                    player_S.stop();
+                    musicPlayed = false;
+                } else {
+                    player.setLooping(true);
+                    player.setVolume(100, 100);
+                    player.start();
+                    musicPlayed = true;
+                    player_S = player;
+                }
+            }catch (Exception e){
+                AlertDialog.Builder dialog = new AlertDialog.Builder(Calculaor.this);
+                 dialog.setTitle("Music");
+                dialog.setMessage("No Music... :(");
+                dialog.show();
+            }
+        }else if(str.equals("0x1314=")) {
             AlertDialog.Builder dialog = new AlertDialog.Builder(Calculaor.this);
             dialog.setTitle("Love");
             dialog.setMessage("520");
