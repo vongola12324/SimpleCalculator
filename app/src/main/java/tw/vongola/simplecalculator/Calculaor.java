@@ -351,9 +351,16 @@ public class Calculaor extends Activity implements View.OnClickListener{
     }
 
     protected BigDecimal pow(BigDecimal base, BigDecimal index){
-        BigDecimal rt = new BigDecimal(base.toString());
-        for(int i=1 ; i<index.intValue(); i++){
-            rt = rt.multiply(base);
+        BigDecimal rt = new BigDecimal("1");
+        if (index.intValue() > 0) {
+            for (int i = 1; i < index.intValue(); i++) {
+                rt = rt.multiply(base);
+            }
+        }
+        else if (index.intValue() < 0) {
+            for (int i = 0; i > index.intValue(); i--) {
+                rt = rt.divide(base, 10, BigDecimal.ROUND_HALF_UP);
+            }
         }
         return rt;
     }
