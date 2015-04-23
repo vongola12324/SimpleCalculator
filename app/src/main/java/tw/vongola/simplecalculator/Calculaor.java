@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -172,7 +173,7 @@ public class Calculaor extends Activity implements View.OnClickListener{
             } else if (btnStr.equals("±")) {
                 tv.setText(String.valueOf(new BigDecimal(calcAnswer((tv.getText().toString() + "="))).negate()));
             } else if (btnStr.equals("√")) {
-                tv.setText(String.valueOf(sqrt(calcAnswer(tv.getText().toString()))));
+                tv.setText(sqrt(calcAnswer(tv.getText().toString() + "=")));
             } else if (btnStr.equals("%")) {
                 tv.setText(new BigDecimal(calcAnswer(tv.getText().toString() + "=")).divide(BigDecimal.valueOf(Double.parseDouble("100"))).toString());
             } else if (btnStr.equals("1/x")) {
@@ -282,8 +283,9 @@ public class Calculaor extends Activity implements View.OnClickListener{
                             default:
                                 flag = 0;
                         }
-                    } else
+                    } else {
                         tmp += String.valueOf(str.charAt(x));
+                    }
                 }
                 while (!num.isEmpty()) {
                     ans = ans.add(num.pop());
