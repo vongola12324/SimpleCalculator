@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval" >
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval" >
+            <gradient android:startColor="#555555" android:endColor="#555555" android:angle="270" />
+            <padding android:top="0dp" android:bottom="1dp" android:left="0dp" android:right="1dp" />
+        </shape>
+    </item>
+    <item android:top="1px">
+        <shape android:shape="oval" >
+            <!-- 填充的顏色 -->
+            <solid android:color="#e6e6f2"/>
+            <!-- 設置按鈕的四個角為弧形 -->
+            <corners android:radius="40dp" />
 
-    <!-- 填充的顏色 -->
-    <solid android:color="#e6e6f2"/>
-
-    <!-- 環狀外部寬度的顏色 -->
-
-    <!-- 設置按鈕的四個角為弧形 -->
-
-    <corners android:radius="40dp" />
-
-    <!-- padding：Button裡面的文字與Button邊界的間隔 -->
-
-</shape>
+        </shape>
+    </item>
+</layer-list>

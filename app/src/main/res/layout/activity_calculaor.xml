@@ -1,26 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="tw.vongola.simplecalculator.Calculaor"
     android:background="#55FFF8D7">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/tf"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="60dp"
-        android:textStyle="bold"
-        android:password="false"
-        android:gravity="right"
-        android:background="#33FFFFFF"
-        android:singleLine="true" />
 
     <TableLayout
         android:layout_width="fill_parent"
@@ -501,5 +486,20 @@
                 android:textStyle="bold" />
         </TableRow>
     </TableLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tf"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="false"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        android:password="false"
+        android:gravity="right"
+        android:singleLine="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
