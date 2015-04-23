@@ -98,29 +98,58 @@ public class Calculaor extends Activity implements View.OnClickListener{
     public void onClick(View v) {
         TextView tv = (TextView)findViewById(R.id.tf);
         String btnStr = ((Button) v).getText().toString();
+        String tvStr = tv.getText().toString();
         try {
-//            if(tv.getText().toString().equals("0"))
-//                tv.setText("");
             if (btnStr.equals("0")) {
-                tv.setText(tv.getText()+btnStr);
+                if(tvStr.equals("0"))
+                    tv.setText(btnStr);
+                else
+                    tv.setText(tvStr + btnStr);
             } else if (btnStr.equals("1")) {
-                tv.setText(tv.getText()+btnStr);
+                if(tvStr.equals("0"))
+                    tv.setText(btnStr);
+                else
+                    tv.setText(tvStr + btnStr);
             } else if (btnStr.equals("2")) {
-                tv.setText(tv.getText()+btnStr);
+                if(tvStr.equals("0"))
+                    tv.setText(btnStr);
+                else
+                    tv.setText(tvStr + btnStr);
             } else if (btnStr.equals("3")) {
-                tv.setText(tv.getText()+btnStr);
+                if(tvStr.equals("0"))
+                    tv.setText(btnStr);
+                else
+                    tv.setText(tvStr + btnStr);
             } else if (btnStr.equals("4")) {
-                tv.setText(tv.getText()+btnStr);
+                if(tvStr.equals("0"))
+                    tv.setText(btnStr);
+                else
+                    tv.setText(tvStr + btnStr);
             } else if (btnStr.equals("5")) {
-                tv.setText(tv.getText()+btnStr);
+                if(tvStr.equals("0"))
+                    tv.setText(btnStr);
+                else
+                    tv.setText(tvStr + btnStr);
             } else if (btnStr.equals("6")) {
-                tv.setText(tv.getText()+btnStr);
+                if(tvStr.equals("0"))
+                    tv.setText(btnStr);
+                else
+                    tv.setText(tvStr + btnStr);
             } else if (btnStr.equals("7")) {
-                tv.setText(tv.getText()+btnStr);
+                if(tvStr.equals("0"))
+                    tv.setText(btnStr);
+                else
+                    tv.setText(tvStr + btnStr);
             } else if (btnStr.equals("8")) {
-                tv.setText(tv.getText()+btnStr);
+                if(tvStr.equals("0"))
+                    tv.setText(btnStr);
+                else
+                    tv.setText(tvStr + btnStr);
             } else if (btnStr.equals("9")) {
-                tv.setText(tv.getText()+btnStr);
+                if(tvStr.equals("0"))
+                    tv.setText(btnStr);
+                else
+                    tv.setText(tvStr + btnStr);
             } else if (btnStr.equals("+")) {
                 tv.setText(tv.getText()+btnStr);
             } else if (btnStr.equals("-")) {
